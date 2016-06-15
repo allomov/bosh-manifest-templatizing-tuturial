@@ -8,12 +8,12 @@ resources:
 
 jobs:
 
-- name: merge-manifests
+- name: generate-manifest
   plan:
   - get: bosh-manifest-templatizing-tuturial
     trigger: true
-  - task: functional-tests
-    file: git-repository/pipeline/tasks/functional-tests.yml
+  - task: generate-manifest
+    file: git-repository/pipeline/tasks/generate-manifest.yml
 
 - name: web-ui-tests
   plan:
