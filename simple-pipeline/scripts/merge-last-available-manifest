@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+scripts_folder=$(dirname $0)
+last_tutorial_folder=$($scripts_folder/get-last-tutorial-folder)
+
+cd $last_tutorial_folder
+source ./.envrc
+./bin/merge

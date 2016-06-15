@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+project_folder = File.expand_path(File.join("..", "..", File.dirname(__FILE__)))
+last_tutorial_lesson = Dir.entries(project_folder).select { |f| f.match(/\d+-.*/) }.sort.last
+puts File.join(project_folder, last_tutorial_lesson)

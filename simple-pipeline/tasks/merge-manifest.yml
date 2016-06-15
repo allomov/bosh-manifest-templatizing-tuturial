@@ -1,0 +1,7 @@
+---
+platform: linux
+image: docker:///_/ruby#2.3.1
+inputs:
+  - name: bosh-manifest-templatizing-tuturial
+run:
+  path: ./bosh-manifest-templatizing-tuturial/simple-pipeline/scripts/merge-last-available-manifest
