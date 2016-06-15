@@ -3,6 +3,10 @@
 scripts_folder=$(dirname $0)
 last_tutorial_folder=$($scripts_folder/get-last-tutorial-folder)
 
+echo $last_tutorial_folder
 cd $last_tutorial_folder
+ls -al 
 source ./.envrc
 ./bin/merge
+
+

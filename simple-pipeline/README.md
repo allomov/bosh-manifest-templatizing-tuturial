@@ -1,3 +1,6 @@
+### How to use
+
 ```
-fly set-pipeline -t tutorial -c pipeline/continuous-deployment.yml -p continuous-deployment --load-vars-from pipeline/stub.yml
+fly set-pipeline -t tutorial -c pipeline.yml -p manifest-tutorial
+fly unpause-pipeline -t tutorial -p manifest-tutorial
 ```
