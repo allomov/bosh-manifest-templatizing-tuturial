@@ -13,4 +13,4 @@ jobs:
   - get: bosh-manifest-templatizing-tuturial
     trigger: true
   - task: generate-manifest
-    file: git-repository/pipeline/tasks/generate-manifest.yml
+    file: bosh-manifest-templatizing-tuturial/pipeline/tasks/generate-manifest.yml
