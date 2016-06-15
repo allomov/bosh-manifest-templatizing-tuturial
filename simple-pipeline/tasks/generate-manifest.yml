@@ -1,6 +1,6 @@
 ---
 platform: linux
-image: docker:///_/ruby#2.3.1
+image: docker:///ruby#2.3.1
 inputs:
   - name: bosh-manifest-templatizing-tuturial
 run:
