@@ -5,8 +5,5 @@ last_tutorial_folder=$($scripts_folder/get-last-tutorial-folder)
 
 echo $last_tutorial_folder
 cd $last_tutorial_folder
-ls -al 
-source ./.envrc
+export PATH=$PATH:$PWD/bin
 ./bin/merge
-
-
