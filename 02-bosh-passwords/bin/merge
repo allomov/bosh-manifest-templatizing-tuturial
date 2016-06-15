@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+script_folder=$(dirname $0)
+
+$script_folder/darwin/spiff++ merge $script_folder/../manifest-template.yml $script_folder/../stub.yml

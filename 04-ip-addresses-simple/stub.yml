@@ -1,0 +1,20 @@
+---
+meta:
+  director_uuid: "5fc42e3c-3261-4b56-bba9-228b08963bd6"
+  domain: "alexander.lomov.com"
+  bosh_passwords:
+    infrastructure: (( exec( "echo", "hello world" ) ))
+    small: (( exec( "mkpasswd", "-m", "sha-512", "password" ) ))
+    large: (( exec( "mkpasswd", "-m", "sha-512", "password" ) ))
+  certificates:
+    keypair_1:
+      private_key: (( read("secrets/keypair_1/example.com.key") ))
+      public_key: (( read("secrets/keypair_1/example.com.pub") ))
+      certificate: (( read("secrets/keypair_1/example.com.crt") ))
+
+  networks:
+    prefix: "192.168"
+    default:
+      quad: 3
+      dns: "192.168.3.1"
+      name: CFNet

@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+case "$(uname -s)" in
+   Darwin)
+     echo "no support of mkpasswd for Mac OS"
+     ;;
+
+   Linux)
+     mkpasswd $@
+     ;;
+
+   *)
+     echo "Error: unknown operating system"
+     exit 1
+     ;;
+esac

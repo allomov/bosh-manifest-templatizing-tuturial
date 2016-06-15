@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+case "$(uname -s)" in
+   Darwin)
+     "$(dirname $0)/darwin/spiff++" $@
+     ;;
+
+   Linux)
+     "$(dirname $0)/linux/spiff++" $@
+     ;;
+
+   *)
+     echo "Error: unknown operating system"
+     exit 1
+     ;;
+esac
